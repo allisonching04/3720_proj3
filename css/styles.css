@@ -9,6 +9,41 @@ body {
 section {
   min-height: 100vh; }
 
+button,
+button::after {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+button {
+  background: none;
+  border: 3px solid #111517;
+  border-radius: 5px;
+  color: #111517;
+  display: block;
+  font-weight: bold;
+  margin: 1em auto;
+  padding: 2em 6em;
+  position: relative;
+  text-transform: uppercase;
+  /* BUTTON 1 */ }
+  button::before, button::after {
+    background: #111517;
+    content: '';
+    position: absolute;
+    z-index: -1; }
+  button:hover {
+    cursor: pointer;
+    color: white; }
+  button::after {
+    height: 0;
+    left: 0;
+    top: 0;
+    width: 100%; }
+  button:hover:after {
+    height: 100%; }
+
 .main-title {
   font: 5em "Rubik", sans-serif;
   font-weight: 700;
@@ -90,6 +125,7 @@ section {
     text-align: center;
     cursor: pointer; }
   .myth .fact-border {
+    margin-bottom: 20px;
     padding: 2em 5em;
     box-shadow: 10px 10px 40px -10px rgba(145, 145, 145, 0.5); }
 
@@ -144,7 +180,7 @@ section {
 .twitter-end {
   grid-column: 1/-1;
   grid-row: 3/4;
-  background-color: grey;
+  background-color: #ededed;
   color: white; }
 
 .hide {
@@ -152,5 +188,37 @@ section {
 
 .open {
   display: block; }
+
+.scroll-direction {
+  grid-column: 1/-1;
+  grid-row: 4/5;
+  width: 100%;
+  align-self: center; }
+
+.arrow-down {
+  width: 2%; }
+
+.arrow-down .arrow-b {
+  animation-delay: -.1s;
+  -webkit-animation-delay: -.1s; }
+
+.arrow {
+  fill: none;
+  stroke: #111517;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+  animation: arrow-down 2s infinite;
+  -webkit-animation: arrow-down 2s infinite; }
+
+@keyframes arrow-down {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 1; }
+  75% {
+    opacity: 0.25; }
+  100% {
+    opacity: 0; } }
 
 /*# sourceMappingURL=styles.css.map */

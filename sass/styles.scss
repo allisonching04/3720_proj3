@@ -8,11 +8,59 @@ $main-color: #111517;
 $light-color: #F5F5F5;
 $highlight-red: #EF0D33;
 
+
 * {box-sizing: border-box;}
 
-body {margin:0; padding:0;}
+body {margin:0; padding:0; }
 
 section {min-height: 100vh;}
+
+//https://codepen.io/ritchiejacobs/pen/qEJjBM?limit=all&page=13&q=hover+
+button,
+button::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+button {
+  background: none;
+  border: 3px solid $main-color;
+  border-radius: 5px;
+  color: $main-color;
+  display: block;
+  font-weight: bold;
+  margin: 1em auto;
+  padding: 2em 6em;
+  position: relative;
+  text-transform: uppercase;
+  	&::before,
+	&::after {
+	  background: $main-color;
+	  content: '';
+	  position: absolute;
+	  z-index: -1;
+	}
+
+	&:hover {
+		cursor: pointer;
+	  	color: white;
+	}
+
+	/* BUTTON 1 */
+	&::after {
+	  height: 0;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	}
+
+	&:hover:after {
+	  height: 100%;
+	}
+}
+
 
 
 .main-title {font:5em $title-font; font-weight: 700; color:$light-color;}
@@ -105,6 +153,8 @@ section {min-height: 100vh;}
 	}
 
 	.fact-border {
+		// background: white;
+		margin-bottom: 20px;
 		padding: 2em 5em;
 		box-shadow: 10px 10px 40px -10px rgba(145,145,145,0.5);
 	}
@@ -151,11 +201,13 @@ section {min-height: 100vh;}
 	color: $main-color;
 	font-weight: 700;
 	text-decoration: none;
+
 }
+
 .twitter-end {
 	grid-column: 1/-1;
 	grid-row: 3/4;
-	background-color: grey;
+	background-color: #ededed;
 	color: white;
 }
 
@@ -167,5 +219,39 @@ section {min-height: 100vh;}
 .open {
 	display: block;
 }
+
+// svg
+.scroll-direction {
+	grid-column: 1/-1;
+	grid-row: 4/5;
+	width: 100%;
+	align-self: center;
+}
+.arrow-down {
+	width: 2%;
+}
+
+.arrow-down .arrow-b{
+	animation-delay:-.1s;
+	-webkit-animation-delay:-.1s;
+}
+
+.arrow{
+	fill: none;
+	stroke:$main-color;
+	stroke-linecap:round;
+	stroke-miterlimit:10;
+	stroke-width:3px;
+	animation: arrow-down 2s infinite;
+	-webkit-animation: arrow-down 2s infinite; 
+}
+
+@keyframes arrow-down {
+	0% {opacity:0}
+	25% {opacity:1}
+	75% {opacity:0.25;}
+	100% {opacity:0}
+}
+
 
 
