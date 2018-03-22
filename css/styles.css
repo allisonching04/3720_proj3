@@ -37,7 +37,7 @@ section {
   .video-section #video-bg-el {
     width: 100%; }
 
-a {
+.scroll-a {
   text-decoration: none;
   color: #F5F5F5; }
 
@@ -68,25 +68,89 @@ a {
     text-align: center; }
 
 .myth {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .myth .secondary-text {
-    flex-basis: 80px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto 150px auto 50px;
+  text-align: center; }
+  .myth .grid-area-title {
+    grid-column: 2/3;
+    grid-row: 1;
     align-self: center; }
+  .myth .grid-area-question {
+    grid-column: 2/3;
+    grid-row: 2;
+    align-self: center; }
+  .myth .show-tweet {
+    grid-column: 2/3;
+    grid-row: 3;
+    align-self: center; }
+  .myth .secondary-text {
+    flex-basis: 80px; }
   .myth .guide-box {
-    margin-top: 50px;
-    align-self: center;
-    justify-self: end; }
+    text-align: center;
+    cursor: pointer; }
   .myth .fact-border {
     padding: 2em 5em;
     box-shadow: 10px 10px 40px -10px rgba(145, 145, 145, 0.5); }
+
+.resources-section {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 20vh auto 5vh;
+  text-align: center; }
+
+.resources-title {
+  grid-column: 1/-1;
+  grid-row: 1/2; }
+
+.resource01 {
+  grid-column: 2/3;
+  grid-row: 2/3; }
+
+.resource03 {
+  grid-column: 3/4;
+  grid-row: 2/3; }
+
+.resource02 {
+  grid-column: 4/5;
+  grid-row: 2/3; }
+
+.resources-detail {
+  align-self: center;
+  font-size: 2em; }
+
+.resource-text {
+  align-self: center;
+  text-align: left;
+  font: 1.2em "Lato", sans-serif;
+  font-weight: 300;
+  margin: 20px;
+  padding: 2em 5em;
+  box-shadow: 10px 10px 40px -10px rgba(145, 145, 145, 0.5); }
+
+.resource-text01 {
+  grid-column: 3/-1;
+  grid-row: 2/3; }
+
+.resource-text02 {
+  grid-column: 1/4;
+  grid-row: 2/3; }
+
+.link-text {
+  color: #111517;
+  font-weight: 700;
+  text-decoration: none; }
+
+.twitter-end {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  background-color: grey;
+  color: white; }
 
 .hide {
   display: none; }
 
 .open {
-  display: grid; }
+  display: block; }
 
 /*# sourceMappingURL=styles.css.map */
