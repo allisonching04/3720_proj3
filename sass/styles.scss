@@ -68,6 +68,7 @@ button {
 .secondary-text {font:100% $body-font; font-weight: 300;}
 .fact-text {font:100% $body-font; font-weight: 300;}
 .fact-open {font:3em $title-font; font-weight: 700; color:$main-color;}
+
 //.tweetText {}
 
 
@@ -193,7 +194,7 @@ button {
 	font-size: 3em;
 	text-align: left;
 	margin: 0;
-	font-size: 1.5em;
+	font-size: 2em;
 }
 
 .tweetProfile {
@@ -212,7 +213,7 @@ button {
 .resources-section{
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: 20vh auto 5vh;
+	grid-template-rows: 20vh auto;
 	text-align: center;
 }
 .resources-title {
@@ -269,6 +270,52 @@ button {
 	display: block;
 
 }
+
+footer {
+	font:100% $body-font; font-weight: 300;
+	color: white;
+	background-color: $main-color;
+	text-align: center;
+	padding: 1em;
+}
+
+// animation
+.link-effect {
+	position: relative;
+  	color:  $main-color;
+  	text-decoration: none;
+
+  	&:hover {
+  		color:  $main-color;
+  	}
+
+  	&:before {
+	  content: "";
+	  position: absolute;
+	  width: 100%;
+	  height: 5px;
+	  bottom: -7px;
+	  left: 0;
+	  background-color: $highlight-red;
+	  visibility: hidden;
+	  -webkit-transform: scaleX(0);
+	  transform: scaleX(0);
+	  -webkit-transition: all 0.2s ease-in-out 0s;
+	  transition: all 0.2s ease-in-out 0s;
+	}
+	&:hover:before {
+	  visibility: visible;
+	  -webkit-transform: scaleX(1);
+	  transform: scaleX(1);
+	}
+
+}
+
+.textEffect {
+	-webkit-transition: all 1s ease-in-out 0s;
+	transition: all 1s ease-in-out 0s;
+}
+
 
 // svg
 .scroll-direction {

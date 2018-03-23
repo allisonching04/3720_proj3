@@ -43,6 +43,14 @@ function init() {
 
   	});
 
+  	$('.youtube').mouseover(function() {
+    	$(this).text('Watch It');
+  	});
+
+  	$('.youtube').mouseout(function() {
+        $(this).text('To the Bone');
+  	});
+
 ////////////////////////////////////////////
 //
 // hide and show Tweet onClick functions
