@@ -143,11 +143,11 @@ button {
   grid-column: 2/3;
   grid-row: 2/3; }
 
-.resource03 {
+.resource02 {
   grid-column: 3/4;
   grid-row: 2/3; }
 
-.resource02 {
+.resource03 {
   grid-column: 4/5;
   grid-row: 2/3; }
 
@@ -168,7 +168,7 @@ button {
   grid-column: 3/-1;
   grid-row: 2/3; }
 
-.resource-text02 {
+.resource-text03 {
   grid-column: 1/4;
   grid-row: 2/3; }
 
