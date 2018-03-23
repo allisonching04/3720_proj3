@@ -4,7 +4,8 @@
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  height: 100%; }
 
 section {
   min-height: 100vh; }
@@ -61,7 +62,7 @@ button {
   font: 100% "Lato", sans-serif;
   font-weight: 300; }
 
-.guide-box {
+.fact-open {
   font: 3em "Rubik", sans-serif;
   font-weight: 700;
   color: #111517; }
@@ -105,7 +106,7 @@ button {
 .myth {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: auto 150px auto 50px;
+  grid-template-rows: auto 100px 450px 50px;
   text-align: center; }
   .myth .grid-area-title {
     grid-column: 2/3;
@@ -121,13 +122,54 @@ button {
     align-self: center; }
   .myth .secondary-text {
     flex-basis: 80px; }
-  .myth .guide-box {
-    text-align: center;
-    cursor: pointer; }
   .myth .fact-border {
     margin-bottom: 20px;
     padding: 2em 5em;
     box-shadow: 10px 10px 40px -10px rgba(145, 145, 145, 0.5); }
+
+#tweet1, #tweet2, #tweet3, .tweetGrid {
+  height: 100%; }
+
+.tweetGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 5fr;
+  grid-template-rows: 20% 80%;
+  position: relative; }
+
+.tweetUserName {
+  grid-column: 2/-1;
+  font-size: 3em;
+  text-align: left;
+  text-transform: uppercase;
+  margin: 0;
+  align-self: center; }
+
+.tweetText {
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+  grid-column: 2/3;
+  grid-row: 3;
+  align-self: center;
+  font: 100% "Rubik", sans-serif;
+  font-weight: 700;
+  color: #111517; }
+
+.tweetTextData {
+  grid-column: 2/-1;
+  grid-row: 2/3;
+  font-size: 3em;
+  text-align: left;
+  margin: 0;
+  font-size: 1.5em; }
+
+.tweetProfile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 20px;
+  background-repeat: no-repeat;
+  background-size: 100%; }
 
 .resources-section {
   display: grid;
