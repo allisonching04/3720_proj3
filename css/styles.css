@@ -298,6 +298,9 @@ footer {
     opacity: 0.25; }
   100% {
     opacity: 0; } }
+@media only screen and (min-width: 1300px) {
+  .showTweet1, .showTweet2, .showTweet3 {
+    font-size: 1.2em; } }
 @media only screen and (max-width: 1200px) and (min-width: 900px) {
   .tweetUserName {
     font-size: 1.5em; }
